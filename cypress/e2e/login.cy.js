@@ -140,7 +140,7 @@ describe('Sign up and login', () => {
 
   })
 
-  it('Login without incorrect username', () => {
+  it('Login with incorrect username', () => {
     cy.log('Open website home page')
     cy.visit('https://automationteststore.com/')
 
@@ -168,7 +168,7 @@ describe('Sign up and login', () => {
       .should('contain.text', "I am a returning customer.")
   })
 
-  it('Login without incorrect password', () => {
+  it('Login with incorrect password', () => {
     cy.log('Open website home page')
     cy.visit('https://automationteststore.com/')
 
