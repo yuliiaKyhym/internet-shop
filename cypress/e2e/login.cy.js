@@ -25,7 +25,7 @@ describe('Sign up and login', () => {
     cy.get('[title="Continue"]')
       .click()
 
-    cy.log('Fill registration form')  
+    cy.log('Fill registration form')
     cy.get('#AccountFrm_firstname')
       .type(user.firstName)
 
@@ -85,14 +85,13 @@ describe('Sign up and login', () => {
     cy.log('Verify user first name on account page')
     cy.get('h1 span.subtext')
       .should('contain', user.firstName)
-    
+
     cy.log(user)
     // cy.get('.maintext')
     //   .should('contain.text', ' Your Account Has Been Created!')
-  })   // cy.get('.maintext')
-  //   .should('contain.text', ' Your Account Has Been Created!')
+  })
 
-  it('Login', () => {
+  it('Login with newly created user', () => {
     cy.log('Open website home page')
     cy.visit('https://automationteststore.com/')
 
@@ -113,6 +112,88 @@ describe('Sign up and login', () => {
     cy.get('.maintext')
       .should('contain.text', 'My Account')
 
+  })
+
+  it('Login without username', () => {
+    cy.log('Open website home page')
+    cy.visit('https://automationteststore.com/')
+
+    cy.log('Open website login page')
+    cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
+      .click()
+
+    cy.log('Enter password')
+    cy.get('#loginFrm_password')
+      .type(user.password)
+
+    cy.get('[title="Login"]')
+      .click()
+
+    cy.log('Check error message displaying')
+    cy.get('.alert')
+      .should('contain.text', 'Error: Incorrect login or password provided.')
+
+    cy.log('Check that user stays on the login page')
+    cy.get('h4.heading4')
+      .last()
+      .should('contain.text', "I am a returning customer.")
+
+  })
+
+  it('Login without incorrect username', () => {
+    cy.log('Open website home page')
+    cy.visit('https://automationteststore.com/')
+
+    cy.log('Open website login page')
+    cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
+      .click()
+
+    cy.log('Fill login form')
+    cy.get('#loginFrm_loginname')
+      .type(`${user.username}123`)
+
+    cy.get('#loginFrm_password')
+      .type(user.password)
+
+    cy.get('[title="Login"]')
+      .click()
+
+    cy.log('Check error message displaying')
+    cy.get('.alert')
+      .should('contain.text', 'Error: Incorrect login or password provided.')
+
+    cy.log('Check that user stays on the login page')
+    cy.get('h4.heading4')
+      .last()
+      .should('contain.text', "I am a returning customer.")
+  })
+
+  it('Login without incorrect password', () => {
+    cy.log('Open website home page')
+    cy.visit('https://automationteststore.com/')
+
+    cy.log('Open website login page')
+    cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
+      .click()
+
+    cy.log('Fill login form')
+    cy.get('#loginFrm_loginname')
+      .type(user.username)
+
+    cy.get('#loginFrm_password')
+      .type(`${user.password}123`)
+
+    cy.get('[title="Login"]')
+      .click()
+
+    cy.log('Check error message displaying')
+    cy.get('.alert')
+      .should('contain.text', 'Error: Incorrect login or password provided.')
+
+    cy.log('Check that user stays on the login page')
+    cy.get('h4.heading4')
+      .last()
+      .should('contain.text', "I am a returning customer.")
   })
 
 })
