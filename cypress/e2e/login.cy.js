@@ -13,11 +13,10 @@ user.username = faker.internet.userName()
 user.password = faker.internet.password(15)
 
 
-
 describe('Sign up and login', () => {
   it('Sign up', () => {
     cy.log('**Open website home page**')
-    cy.visit('https://automationteststore.com/')
+    cy.visit('/')
 
     cy.log('Open website sign up page')
     cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
@@ -93,7 +92,7 @@ describe('Sign up and login', () => {
 
   it('Login with newly created user', () => {
     cy.log('Open website home page')
-    cy.visit('https://automationteststore.com/')
+    cy.visit('/')
 
     cy.log('Open website login page')
     cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
@@ -116,7 +115,7 @@ describe('Sign up and login', () => {
 
   it('Login without username', () => {
     cy.log('Open website home page')
-    cy.visit('https://automationteststore.com/')
+    cy.visit('/')
 
     cy.log('Open website login page')
     cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
@@ -142,7 +141,7 @@ describe('Sign up and login', () => {
 
   it('Login with incorrect username', () => {
     cy.log('Open website home page')
-    cy.visit('https://automationteststore.com/')
+    cy.visit('/')
 
     cy.log('Open website login page')
     cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
@@ -170,7 +169,7 @@ describe('Sign up and login', () => {
 
   it('Login with incorrect password', () => {
     cy.log('Open website home page')
-    cy.visit('https://automationteststore.com/')
+    cy.visit('/')
 
     cy.log('Open website login page')
     cy.get('#customer_menu_top a[href="https://automationteststore.com/index.php?rt=account/login"]')
