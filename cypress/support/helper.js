@@ -84,6 +84,7 @@ export function findProduct(product_name) {
 
                 } else {
                     cy.log('[There is no such product](http://e.ua)') //link is just to make text blue for visibility
+                    throw new Error('Product not found')
                 }
 
             })
