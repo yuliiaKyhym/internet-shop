@@ -1,11 +1,17 @@
-
 {
-  "username": "Wilson.Wisozk",
-  "email": "Ida_Morissette32@yahoo.com",
-  "password": "hhEqNueBOnwE7w6",
   "firstName": "Isabell",
   "lastName": "Sue D'Amore",
-  "address": "2653 Dasia Tunnel",
+  "email": "Ida_Morissette32@yahoo.com",
+  "phone": "+380636028585",
+  "fax": "+380660570011",
+  "company": "Kulagin and partners",
+  "address1": "2653 Dasia Tunnel",
+  "address2": "2023 Smith avenu",
   "city": "West Rolandoport",
-  "postcode": "149"
+  "postcode": "149",
+  "username": "Wilson.Wisozk",
+  "password": "hhEqNueBOnwE7w6",
+  "randomUsername": "Lalalo",
+  "randomPassword": "kjdskfhsdjkfhj",
+  "randomFirstName": "Yuliia"
 }
