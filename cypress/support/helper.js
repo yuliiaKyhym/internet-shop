@@ -59,7 +59,7 @@ export function findProduct(product_name) {
 
     //Find needed product among all
     cy.get('.thumbnail').then(products => {
-        let neededProduct
+       let neededProduct
         if ((neededProduct = products.find(`a:contains("${product_name}")`)).length > 0) {
             cy.wrap(neededProduct).click({ force: true })
 
@@ -72,9 +72,7 @@ export function findProduct(product_name) {
 
             //until 'next' button is present click on it and search product again
                 let neededPage = pages.find('.pagination li a[href]:contains(">")')
-                console.log(neededPage)
-                cy.log(neededPage)
-
+        
                 if ((neededPage = pages.find('a[href]:contains(">")')).length > 0) {
                     cy.wrap(neededPage)
                         .first()

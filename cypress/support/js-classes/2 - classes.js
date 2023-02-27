@@ -1,18 +1,16 @@
 class Comment {
 
-
-    constructor(text){
+    constructor(text) {
         this.text = text
-        this.likesQuantity = 0 
+        this.likesQuantity = 0
     }
 
-    addLike(){
+    addLike() {
         this.likesQuantity += 1 //this.likesQuantity = this.likeQuantity + 1
     }
 
-
-static mergeComments(first, second){ //статический метод НЕ наследуется экземплярами класса
-    return `${first} + ${second}`
+    static mergeComments(first, second) { //статический метод НЕ наследуется экземплярами класса
+        return `${first} + ${second}`
     }
 }
 

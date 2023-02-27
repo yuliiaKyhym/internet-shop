@@ -2,7 +2,7 @@
 
 import BasePage from "./BasePage"
 
-class LoginPage extends BasePage{
+class LoginPage extends BasePage {
 
     visit() {
         cy.log('Open login page')
@@ -27,7 +27,7 @@ class LoginPage extends BasePage{
         cy.log('User is unathorized :)')
     }
 
-    submitLoginForm(user){
+    submitLoginForm(user) {
         cy.log('Trying to login...')
 
         this.getLoginField().type(user.username)
@@ -35,7 +35,30 @@ class LoginPage extends BasePage{
         this.getSubmitButton().click()
 
     }
+    assertInvalidLogin() {
+        cy.get('.alert')
+            .should('contain.text', 'Error: Incorrect login or password provided.')
+    }
 
+    submitLoginFormWithoutUsername(user) {
+        this.getPasswordField().type(user.password)
+        this.getSubmitButton().click()
+        this.assertInvalidLogin()
+    }
+
+    submitLoginFormInvalidUsername(user) {
+        this.getLoginField().type(user.username + 123)
+        this.getPasswordField().type(user.password)
+        this.getSubmitButton().click()
+        this.assertInvalidLogin()
+    }
+
+    submitLoginFormInvalidPassword(user) {
+        this.getLoginField().type(user.username)
+        this.getPasswordField().type(user.password + 123)
+        this.getSubmitButton().click()
+        this.assertInvalidLogin()
+    }
 }
 
 export default new LoginPage()
