@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.488" tests="2" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-03-02T18:58:55" tests="2" file="cypress/e2e/headlessLoginTest.cy.js" time="2.477" failures="0">
+    <testcase name="Open account page" time="1.615" classname="Open account page">
+    </testcase>
+    <testcase name="Open order history page" time="0.842" classname="Open order history page">
+    </testcase>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-03-02T19:04:28.935Z",
+    "end": "2023-03-02T19:04:32.434Z",
+    "duration": 3499,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da7e7eb6-aba9-4fa5-85f5-5a1448c07abc",
+      "title": "",
+      "fullFile": "cypress/e2e/headlessLoginTest.cy.js",
+      "file": "cypress/e2e/headlessLoginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Open account page",
+          "fullTitle": "Open account page",
+          "timedOut": null,
+          "duration": 2577,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "(0, _helper.headlessLogin)(user);\ncy.visit('/index.php?rt=account/account');\n_AccountPage.default.verifyUserName(user);",
+          "err": {},
+          "uuid": "1822f79c-19a8-4ffb-bb26-dcb056af9d7d",
+          "parentUUID": "da7e7eb6-aba9-4fa5-85f5-5a1448c07abc",
+          "isHook": false,
+          "skipped": false
+        },
+        {
+          "title": "Open order history page",
+          "fullTitle": "Open order history page",
+          "timedOut": null,
+          "duration": 876,
+          "state": "passed",
+          "speed": "fast",
+          "pass": true,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "(0, _helper.headlessLogin)(user);\ncy.visit('/index.php?rt=account/history');\ncy.log('**Verify user first name on account page**');\ncy.get('h1 span.maintext', {\n  timeout: 20000\n}).should('contain', ' My Order History');",
+          "err": {},
+          "uuid": "cba5a8f8-dfbd-4c13-a256-c9a41f0789d9",
+          "parentUUID": "da7e7eb6-aba9-4fa5-85f5-5a1448c07abc",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [
+        "1822f79c-19a8-4ffb-bb26-dcb056af9d7d",
+        "cba5a8f8-dfbd-4c13-a256-c9a41f0789d9"
+      ],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 3453,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+<testsuite name="Mocha Tests" tests="5" failures="0" errors="0" skipped="0" timestamp="Thu, 02 Mar 2023 18:56:00 GMT" time="14.755">
+<testcase classname="Sign up and login" name="Sign up" time="9.121"/>
+<testcase classname="Sign up and login" name="Login with valid user" time="1.492"/>
+<testcase classname="Sign up and login" name="Login without username" time="1.39"/>
+<testcase classname="Sign up and login" name="Login with invalid username" time="1.356"/>
+<testcase classname="Sign up and login" name="Login with invalid password" time="1.33"/>
+</testsuite>

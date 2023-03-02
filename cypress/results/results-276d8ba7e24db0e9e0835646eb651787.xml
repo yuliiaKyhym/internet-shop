@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="14.675" tests="5" failures="0">
+  <testsuite name="Root Suite" timestamp="2023-03-02T18:59:04" tests="0" file="cypress/e2e/loginAndSignup.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="Sign up and login" timestamp="2023-03-02T18:59:04" tests="5" time="14.632" failures="0">
+    <testcase name="Sign up and login Sign up" time="8.277" classname="Sign up">
+    </testcase>
+    <testcase name="Sign up and login Login with valid user" time="1.688" classname="Login with valid user">
+    </testcase>
+    <testcase name="Sign up and login Login without username" time="1.118" classname="Login without username">
+    </testcase>
+    <testcase name="Sign up and login Login with invalid username" time="1.889" classname="Login with invalid username">
+    </testcase>
+    <testcase name="Sign up and login Login with invalid password" time="1.589" classname="Login with invalid password">
+    </testcase>
+  </testsuite>
+</testsuites>
