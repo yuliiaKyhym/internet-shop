@@ -11,5 +11,10 @@
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.2.2",
     "mochawesome-report-generator": "^6.2.0"
-  }
+  },
+      "scripts": {
+      "allure:clear": "rm -rf allure-report/ allure-results cypress/screenshots cypress/videos || true",
+      "cy:run:allure": "npx cypress run --env allure=true",
+      "allure:generate": "npx allure generate allure-results --clean -o allure-report"
+    }
 }
