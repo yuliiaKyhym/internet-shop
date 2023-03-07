@@ -13,7 +13,7 @@ pipeline {
     stage('Cypress run') {
       steps {
         sh 'npm run allure:clear'
-        sh 'npm run cy:run:allure'
+        sh 'NO_COLOR=1 npm run cy:run:allure'
       }
   }
     stage('Allure report') {
